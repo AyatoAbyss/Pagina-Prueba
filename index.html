@@ -123,11 +123,41 @@
                 color: white;
             }
 
+            .register-button {
+                background-color: white;
+                color: #ff8b26;
+                border: 2px solid #ff8b26;
+                border-radius: 5px;
+                padding: 8px 15px;
+                margin-left: 10px;
+                cursor: pointer;
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+            .register-button:hover{
+                background-color: #ff8b26;
+                color: white;
+            }
+
+            .header {
+                position: absolute;
+                top: 18px;
+                left: 50px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+
             /*cofiguracion para pantallas en moviles */
             @media only screen and (max-width: 600px) {
                 h1 {
             font-size: 1.5rem;
         }
+       
+        .button-container {
+                flex-direction: column; 
+            }
 
         p {
             padding: 5px;
@@ -148,10 +178,13 @@
                 <a href="frecuentes.html" class="button">Frecuentes</a>
             </div>
 
-            <div class="menu-button" onclick="toggleMenu()">
-                <div></div>
-                <div></div>
-                <div></div>
+                <div class="menu-button" onclick="toggleMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            <div class="header">
+                <a href="login.html" class="register-button">Registro/acceso</a>
             </div>
 
             <div class="menu" id="menu">
