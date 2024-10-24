@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Principal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ff8b26; /* Color de fondo */
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        .profile {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .logout {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .logout button {
+            padding: 10px 20px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .logout button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Bienvenido a tu Menú Principal</h2>
+    <div class="profile">
+        <h3>Perfil del Usuario</h3>
+        <p id="userInfo"></p>
+    </div>
+    <div class="logout">
+        <button id="logoutButton">Cerrar Sesión</button>
+    </div>
+</div>
+
+<script>
+    // Obtener información del usuario desde localStorage
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const currentUsername = localStorage.getItem('currentUser');
+
+    // Mostrar información del usuario en la página
+    const user = users.find(user => user.username === currentUsername);
+    if (user) {
+        document.getElementById('userInfo').textContent = `Nombre de Usuario: ${user.username}`;
+    } else {
+        alert("Error: No se pudo encontrar información del usuario.");
+        window.location.href = "index.html"; // Redirige a la página de inicio de sesión si no se encuentra el usuario
+    }
+
+    // Función para cerrar sesión
+    document.getElementById('logoutButton').addEventListener('click', function() {
+        localStorage.removeItem('currentUser'); // Limpiar el usuario actual
+        window.location.href = "index.html"; // Redirige a la página de inicio de sesión
+    });
+</script>
+
+</body>
+</html>

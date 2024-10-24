@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ff8b26;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .profile-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #ff8b26;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="profile-container">
+    <h2>Perfil de Usuario</h2>
+    <p><strong>Nombre de Usuario:</strong> <span id="username"></span></p>
+    <p><strong>Correo Electrónico:</strong> <span id="email"></span></p>
+</div>
+
+<script>
+    // Obtener los datos del usuario logueado desde sessionStorage
+    const loggedUser = sessionStorage.getItem('loggedUser');
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+
+    // Buscar los datos del usuario en localStorage
+    const user = users.find(user => user.username === loggedUser);
+
+    if (user) {
+        // Mostrar los datos del usuario en la página
+        document.getElementById('username').textContent = user.username;
+        document.getElementById('email').textContent = user.email;
+    } else {
+        alert('No se ha encontrado el usuario.');
+        window.location.href = 'index.html'; // Redirigir al login si no hay usuario logueado
+    }
+</script>
+
+</body>
+</html>

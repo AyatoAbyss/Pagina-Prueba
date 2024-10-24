@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pitic Market</title>
+        <title>Pitic Market (Logged)</title>
         <style>
             body {
                 font-family: Arial, Helvetica, sans-serif;
@@ -124,30 +124,23 @@
             }
 
             .register-button {
-                background-color: white;
-                color: #ff8b26;
-                border: 2px solid #ff8b26;
-                border-radius: 5px;
-                padding: 8px 15px;
-                margin-left: 10px;
-                cursor: pointer;
-                font-weight: bold;
-                text-decoration: none;
-            }
+            display: none;
 
-            .register-button:hover{
-                background-color: #ff8b26;
-                color: white;
             }
 
             .header {
                 position: absolute;
-                top: 18px;
-                left: 50px;
+                top: 25px;
+                left: 60px;
                 display: flex;
                 flex-direction: row;
                 align-items: center;
             }
+
+            .username {
+            color: white;
+            font-weight: bold;
+        }
 
             /*cofiguracion para pantallas en moviles */
             @media only screen and (max-width: 600px) {
@@ -184,11 +177,11 @@
                     <div></div>
                 </div>
             <div class="header">
-                <a href="login.html" class="register-button">Registro/acceso</a>
+                <span id="user-name" class="username">Usuario</span>
             </div>
 
             <div class="menu" id="menu">
-                <a href="mi perfil.html" class="menu-item">Mi perfil</a>
+                <a href="#" id="profile-link" class="menu-item">Mi perfil</a>
                 <a href="configuracion.html" class="menu-item">configuracion</a>
             </div>
             <script>
@@ -205,7 +198,14 @@
                     menu.style.display = 'none';
                     }
                 }
-                
+                const loggedUser = sessionStorage.getItem('loggedUser');
+                if (loggedUser) {
+                    document.getElementById('user-name').textContent = loggedUser;
+                    document.getElementById('profile-link').onclick = function() {
+                        window.location.href = 'perfil.html';
+            };
+                }
+
             </script>
             
             
