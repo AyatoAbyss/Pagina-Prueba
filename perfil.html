@@ -7,20 +7,52 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #ff8b26;
+            background-color: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
         }
 
-        .profile-container {
-            background-color: white;
+        .top-container {
+            background-color: #ff8b26;
+            position: absolute;
+            align-self: baseline;
+            text-align: left;
             padding: 20px;
-            border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            width: 100%;
+        }
+
+        .profile-container {
+            background-color: #f9f9f9;
+            position: absolute;
+            align-self: center;
+            padding: 5px;
+            border-radius: 0px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 98%; 
+            top: 110px; 
+        }
+
+        .home-button {
+            padding: 10px 20px;
+            background-color: transparent;
+            color:white;
             text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: none;
+            border: none;
+            font-size: 20px;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
         }
 
         h2 {
@@ -29,15 +61,39 @@
 
         p {
             margin: 10px 0;
+        }   
+
+        
+            /*cofiguracion para pantallas en moviles */
+            @media only screen and (max-width: 600px) {
+                h1 {
+            font-size: 1.5rem;
         }
+       
+        .button-container {
+                flex-direction: column; 
+            }
+
+        p {
+            padding: 5px;
+        }
+    }
+    
     </style>
 </head>
 <body>
 
+<div class="top-container">
+    <button onclick="window.history.back();" class="home-button">← Regresar a Home</a>
+</div>
+
 <div class="profile-container">
+    <img src="images/profile-image.webp" alt="Imagen de perfil" class="profile-image" id="profileImage">
+
     <h2>Perfil de Usuario</h2>
-    <p><strong>Nombre de Usuario:</strong> <span id="username"></span></p>
-    <p><strong>Correo Electrónico:</strong> <span id="email"></span></p>
+    <p><strong>Usuario:</strong> <span id="username"></span></p>
+    <p><strong>Email:</strong> <span id="email"></span></p>
+</div>
 </div>
 
 <script>

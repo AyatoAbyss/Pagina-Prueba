@@ -64,6 +64,21 @@
         h2 {
             color: #fff;
         }
+        
+            /*cofiguracion para pantallas en moviles */
+            @media only screen and (max-width: 600px) {
+                h1 {
+            font-size: 1.5rem;
+        }
+       
+        .button-container {
+                flex-direction: column; 
+            }
+
+        p {
+            padding: 5px;
+        }
+    }
     </style>
 </head>
 <body>
@@ -114,7 +129,7 @@
     </div>
 
     <!-- Botón para regresar a Home -->
-    <a href="home.html" class="home-button">Regresar a Home</a>
+    <button onclick="window.history.back();" class="home-button">Regresar a Home</a>
 </div>
 
 </body>
