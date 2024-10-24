@@ -14,7 +14,8 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                height: 100vh; 
+                height: 100vh;
+                position: relative;
             }
 
             .logo-container{
@@ -35,6 +36,8 @@
                 margin-top: 20px;
                 color: transparent;
             }
+
+    
 
             h1 {
                 color: white;
@@ -77,6 +80,29 @@
                 padding: 10px;
             }
 
+            .menu {
+                display: none;
+                position: absolute;
+                top: 100px;
+                left: 20px;
+                background-color: white;
+                border-radius: 5px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                z-index: 10;
+            }
+
+            .menu-item {
+                padding: 10px 15px;
+                text-decoration: none;
+                color: #ff8b26;
+                display: block;
+            }
+
+            .menu-item:hover {
+                background-color: #ff8b26;
+                color: white;
+            }
+
             /*cofiguracion para pantallas en moviles */
             @media only screen and (max-width: 600px) {
                 h1 {
@@ -97,10 +123,34 @@
                 <img src="logo.jpeg" alt="logo de la pagina">
             </a>
 
-        <div class="button-container">
+            <div class="button-container">
                 <a href="novedades.html" class="button">Novedades</a>
-                <a href="frecuentes.html" class="button">Frecuentes</a> <!-- Cambiado a "Frecuentes" -->
+                <a href="frecuentes.html" class="button">Frecuentes</a>
+            </div>
 
-        </div>
-    </body>
+            <div class="menu-button">
+                <button class="button" onclick="toggleMenu()">menu</button>
+            </div>
+
+            <div class="menu" id="menu">
+                <a href="mi perfil.html" class="menu-item">Mi perfil</a>
+                <a href="configuracion.html" class="menu-item">configuracion</a>
+            </div>
+            <script>
+               function toggleMenu() {
+                const menu = document.getElementById('menu');
+                menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+            }
+        
+            window.onclick = function(event) {
+                const menu = document.getElementById('menu');
+                const button = document.querySelector('.menu-button button');
+                // Se corrigió la lógica de cierre del menú si se hace clic fuera
+                if (!button.contains(event.target) && !menu.contains(event.target)) {
+                    menu.style.display = 'none';
+                    }
+                }
+            </script>
+            
+</body>
 </html>
