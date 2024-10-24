@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucursales</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ff8b26;
+        }
+        .container {
+            padding: 20px;
+        }
+        .store-card {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 8px;
+            margin: 10px 0;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .store-info {
+            flex-grow: 1;
+        }
+        .store-info h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+        .store-info p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .store-rating {
+            color: #f39c12;
+            font-size: 16px;
+        }
+        .store-link {
+            margin-top: 10px;
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #ff8b26;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .store-link:hover {
+            background-color: #ff6a00;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Sucursal 1 -->
+    <div class="store-card">
+        <div class="store-info">
+            <h3>Nombre: Tienda A</h3>
+            <p><strong>ID Proveedor:</strong> 101</p>
+            <p><strong>ID Tienda:</strong> 001</p>
+            <p><strong>Dirección:</strong> Calle Principal 123, Ciudad</p>
+            <p><strong>Teléfono:</strong> +52 123 456 7890</p>
+            <p><strong>Calificación:</strong> <span class="store-rating">★★★★☆ (4.2)</span></p>
+            <a href="productos_tienda_A.html" class="store-link">Ver productos</a> <!-- Enlace a los productos de la Tienda A -->
+        </div>
+    </div>
+
+    <!-- Sucursal 2 -->
+    <div class="store-card">
+        <div class="store-info">
+            <h3>Nombre: Tienda B</h3>
+            <p><strong>ID Proveedor:</strong> 102</p>
+            <p><strong>ID Tienda:</strong> 002</p>
+            <p><strong>Dirección:</strong> Avenida Secundaria 456, Ciudad</p>
+            <p><strong>Teléfono:</strong> +52 987 654 3210</p>
+            <p><strong>Calificación:</strong> <span class="store-rating">★★★★☆ (4.1)</span></p>
+            <a href="productos_tienda_B.html" class="store-link">Ver productos</a> <!-- Enlace a los productos de la Tienda B -->
+        </div>
+    </div>
+
+    <!-- Sucursal 3 -->
+    <div class="store-card">
+        <div class="store-info">
+            <h3>Nombre: Tienda C</h3>
+            <p><strong>ID Proveedor:</strong> 103</p>
+            <p><strong>ID Tienda:</strong> 003</p>
+            <p><strong>Dirección:</strong> Calle Tercera 789, Ciudad</p>
+            <p><strong>Teléfono:</strong> +52 555 123 4567</p>
+            <p><strong>Calificación:</strong> <span class="store-rating">★★★★☆ (4.6)</span></p>
+            <a href="productos_tienda_C.html" class="store-link">Ver productos</a> <!-- Enlace a los productos de la Tienda C -->
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
