@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos Frecuentes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ff8b26;
+        }
+        .container {
+            padding: 20px;
+        }
+        .product-card {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 8px;
+            margin: 10px 0;
+            padding: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .product-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            margin-right: 10px;
+        }
+        .product-info {
+            flex-grow: 1;
+        }
+        .product-info h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+        .product-info p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .product-price {
+            font-weight: bold;
+            color: #333;
+        }
+        .home-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #ff8b26;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            font-weight: bold;
+            display: inline-block;
+        }
+        .home-button:hover {
+            background-color: #ff8b26;
+            color: #fff;
+        }
+        h2 {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Productos Frecuentes</h2>
+
+    <!-- Producto 1 -->
+    <div class="product-card">
+        <img src="https://via.placeholder.com/80" alt="Producto 1">
+        <div class="product-info">
+            <h3>Producto Frecuente 1</h3>
+            <p><strong>Descripción:</strong> Este es un producto que los clientes más ven.</p>
+            <p><strong>Costo:</strong> $50.00</p>
+            <p><strong>Proveedor:</strong> Proveedor A</p>
+            <p><strong>Sucursal:</strong> Tienda A</p>
+            <p><strong>ID del Producto:</strong> 001N</p>
+            <p><strong>Inventario:</strong> 25 unidades</p>
+        </div>
+    </div>
+
+    <!-- Producto 2 -->
+    <div class="product-card">
+        <img src="https://via.placeholder.com/80" alt="Producto 2">
+        <div class="product-info">
+            <h3>Producto Frecuente 2</h3>
+            <p><strong>Descripción:</strong> Este producto es buscado frecuentemente.</p>
+            <p><strong>Costo:</strong> $7.99</p>
+            <p><strong>Proveedor:</strong> Proveedor B</p>
+            <p><strong>Sucursal:</strong> Tienda B</p>
+            <p><strong>ID del Producto:</strong> 002N</p>
+            <p><strong>Inventario:</strong> 100 unidades</p>
+        </div>
+    </div>
+
+    <!-- Producto 3 -->
+    <div class="product-card">
+        <img src="https://via.placeholder.com/80" alt="Producto 3">
+        <div class="product-info">
+            <h3>Producto Frecuente 3</h3>
+            <p><strong>Descripción:</strong> Producto innovador que los clientes aman.</p>
+            <p><strong>Costo:</strong> $15.99</p>
+            <p><strong>Proveedor:</strong> Proveedor C</p>
+            <p><strong>Sucursal:</strong> Tienda C</p>
+            <p><strong>ID del Producto:</strong> 003N</p>
+            <p><strong>Inventario:</strong> 70 unidades</p>
+        </div>
+    </div>
+
+    <!-- Botón para regresar a Home -->
+    <a href="home.html" class="home-button">Regresar a Home</a>
+</div>
+
+</body>
+</html>
