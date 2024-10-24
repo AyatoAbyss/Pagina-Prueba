@@ -83,7 +83,7 @@
             .menu {
                 display: none;
                 position: absolute;
-                top: 100px;
+                top: 70px;
                 left: 20px;
                 background-color: white;
                 border-radius: 5px;
@@ -96,6 +96,26 @@
                 text-decoration: none;
                 color: #ff8b26;
                 display: block;
+            }
+
+            .menu-button {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                cursor: pointer;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .menu-button div {
+                width: 100%;
+                height: 4px;
+                background-color: #ffffff;
+                margin: 4px 0;
+                transition: all 0.3s ease;
             }
 
             .menu-item:hover {
@@ -128,8 +148,10 @@
                 <a href="frecuentes.html" class="button">Frecuentes</a>
             </div>
 
-            <div class="menu-button">
-                <button class="button" onclick="toggleMenu()">menu</button>
+            <div class="menu-button" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
 
             <div class="menu" id="menu">
@@ -145,7 +167,7 @@
             window.onclick = function(event) {
                 const menu = document.getElementById('menu');
                 const button = document.querySelector('.menu-button button');
-
+                
                 if (!button.contains(event.target) && !menu.contains(event.target)) {
                     menu.style.display = 'none';
                     }
