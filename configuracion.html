@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+EAN13+Text&family=M+PLUS+1p&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERFIL</title>
+    <style>
+        * {
+            box-sizing: border-box; /* Makes padding and borders part of the width/height */
+        }
+
+        html, body {
+            font-family: 'M PLUS 1p', sans-serif; /* Default font */
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* Page background color */
+        }
+
+        .gray-stripe {
+            background-color: #F5F5F5; /* Gray background */
+            padding: 30px; /* Adds space inside the gray stripe */
+            text-align: left;
+            width: 100%; /* Ensures it spans the full width of the container */
+            box-sizing: border-box; /* Ensures padding is included in the width */
+            margin: 5px 0 0 0px;
+        }
+
+        .gray-stripe p {
+            margin: 0px 0 0 50px;
+            font-size: 2vw;
+        }
+
+        .gray-stripe input {
+            margin: 10px 0 0 50px; /* Adds space above the input */
+            font-size: 2vw; /* Font size for input */
+            padding: 5px; /* Padding inside the input field */
+            width: calc(100% - 70px); /* Full width minus some margin */
+        }
+
+        .container {
+            width: 90%; /* Set width as a percentage for responsiveness */
+            max-width: 1080px; /* Optional: Limit the maximum width on larger screens */
+            height: auto; /* Adjust height automatically to content */
+            margin: 0 auto;
+            background-color: #FFffff; /* Container background color */
+            position: relative; /* Ensures header tab stays within the container */
+        }
+
+        /* Header tab inside the container */
+        .header-tab {
+            width: 100%; /* Full width of the container */
+            background-color: #FF8B26; /* Dark background for the header */
+            color: white;
+            padding: 10px 0;
+            box-shadow: 0 0px 0px 0px gray; /* Optional shadow for a tab effect */
+            text-align: center; /* Centers the text inside the tab */
+            position: relative; /* Keeps the header inside the container */
+        }
+
+        .header-tab h1 {
+            margin: 0;
+            font-size: 3vw; /* Use viewport width for responsive font sizing */
+            font-family: 'M PLUS 1p', sans-serif; /* Custom font for header */
+            padding: 15px 0;
+            display: inline-block; /* Aligns text and icon properly */
+        }
+
+        .header-tab .clickable-greater-than {
+            font-size: 3vw; /* Font size for the clickable symbol */
+            color: white; /* Color of the symbol */
+            text-decoration: none; /* Remove underline from link */
+            margin-right: 5px; /* Adds a little space between the symbol and the text */
+            display: inline-block; /* Ensures it aligns properly */
+        }
+
+        /* Content styling */
+        .content {
+            padding-top: 20px; /* Optional padding to space the content */
+            font-size: 4vw; /* Responsive font size */
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header Tab (inside the container) -->
+        <div class="header-tab">
+            <a href="#" class="clickable-greater-than">&gt;</a> <!-- Clickable greater-than symbol -->
+            <h1>Version 0.0.1</h1>
+        </div>
+
+        <!-- Gray Stripe inside the body with Text -->
+        <div class="gray-stripe">
+            <p>Ubicacion</p>
+            <input type="text" placeholder="Gutierrez Manzano #421 entre col. Tampico y Chabacano">
+        </div>
+    </div>
+</body>
+</html>
+
+
+
